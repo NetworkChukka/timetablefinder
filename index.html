@@ -101,20 +101,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);m
 .r-disc-txt{font-size:12.5px;color:#7c4a0a;line-height:1.7;}
 .r-disc-txt strong{color:#7c1a1a;}
 
-/* Footer & Contact Styles */
+/* Footer & Contact Section */
 .ftr {background: var(--navy); color: #fff; padding: 60px 0 30px; margin-top: 40px; border-top: 4px solid var(--gold);}
 .ftr-in {max-width: 1100px; margin: 0 auto; padding: 0 24px;}
-.ftr-grid {display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);}
+.ftr-grid {display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);}
 .ftr-logo {font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--gold); margin-bottom: 12px;}
 .ftr-desc {font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 400px;}
-.ftr-lbl {font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #fff;}
-.ftr-sub {font-size: 12.5px; color: rgba(255,255,255,0.5); margin-bottom: 16px; line-height: 1.5;}
-.btn-email {display: inline-block; background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.2);}
-.btn-email:hover {background: var(--gold); border-color: var(--gold); transform: translateY(-2px);}
+
+.ftr-form-box {background: rgba(255,255,255,0.05); padding: 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);}
+.ftr-lbl {font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--gold); display: block;}
+.ftr-form {display: flex; flex-direction: column; gap: 12px;}
+.ftr-input {background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 10px 14px; color: #fff; font-size: 13px; font-family: inherit;}
+.ftr-textarea {background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 10px 14px; color: #fff; font-size: 13px; font-family: inherit; resize: vertical; min-height: 80px;}
+.btn-submit {background: var(--gold); color: var(--navy); border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer; transition: all 0.2s;}
+.btn-submit:hover {background: #fff; transform: translateY(-2px);}
+
 .ftr-copy {padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.4);}
 
 @media print{.hdr-pat,.act,.two,.disc,.sec-title,.sec-sub,.crest,.ftr{display:none!important;}#result{display:block!important;}body{background:#fff;}.day-hdr{print-color-adjust:exact;-webkit-print-color-adjust:exact;}}
-@media(max-width:600px){.tr,.th{grid-template-columns:1fr;}.tr-code,.tr-time{border:none;border-bottom:1px solid var(--mist);background:none;}.th{display:none;}.hdr-in{padding:24px 16px 20px;}.main{padding:20px 12px 60px;}.r-intro{flex-direction:column;align-items:flex-start;}.r-stats{margin-left:0;}.ftr-grid {grid-template-columns: 1fr; gap: 30px;}.ftr-copy {flex-direction: column; gap: 10px; text-align: center;}}
+@media(max-width:700px){
+  .ftr-grid {grid-template-columns: 1fr; gap: 40px;}
+  .tr,.th{grid-template-columns:1fr;}
+  .tr-code,.tr-time{border:none;border-bottom:1px solid var(--mist);background:none;}
+  .th{display:none;}
+  .hdr-in{padding:24px 16px 20px;}
+  .main{padding:20px 12px 60px;}
+  .r-intro{flex-direction:column;align-items:flex-start;}
+  .r-stats{margin-left:0;}
+  .ftr-copy {flex-direction: column; gap: 10px; text-align: center;}
+}
 </style>
 </head>
 <body>
@@ -163,15 +178,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);m
         <div class="ftr-logo">🎓 RUSL · FAS</div>
         <p class="ftr-desc">Providing quick access to exam schedules for the Faculty of Applied Sciences. Efficiency through technology.</p>
       </div>
-      <div class="ftr-contact">
-        <div class="ftr-lbl">Found an error?</div>
-        <p class="ftr-sub">If you notice any discrepancies in the dates or times, please report them immediately.</p>
-        <a href="mailto:support@example.com" class="btn-email">📧 Contact Support</a>
+      <div class="ftr-form-box">
+        <span class="ftr-lbl">Report an error or send feedback</span>
+        <form class="ftr-form" action="https://formcarry.com/s/KPorJ8TQomf" method="POST" accept-charset="UTF-8">
+          <input type="email" name="email" class="ftr-input" placeholder="Your Email" required>
+          <textarea name="message" class="ftr-textarea" placeholder="Describe the error found..." required></textarea>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
       </div>
     </div>
     <div class="ftr-copy">
-      <span>Copyright &copy; 2026 networkchukka. All Rights Reserved.</span>
-      <span>Designed for FAS Students</span>
+      <span>Copyright &copy; 2026 **networkchukka**. All Rights Reserved.</span>
+      <span>Designed for RUSL Students</span>
     </div>
   </div>
 </footer>
