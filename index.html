@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exam Timetable Finder – RUSL Faculty of Applied Sciences</title>
+<title>Exam Timetable Finder – NetworkChukka</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0f1624;--paper:#f7f5f0;--gold:#c8922a;--gold-light:#f5e6c8;--gold-pale:#fdf8ee;--crimson:#9b2335;--navy:#1a2e52;--navy-mid:#243c6e;--teal:#1a6b60;--mist:#e8e4dc;--shadow:rgba(15,22,36,0.12);--muted:#6b6459;--border:#d8d2c8;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;overflow-x:hidden;display:flex;flex-direction:column;}
 .hdr{background:var(--navy);position:relative;overflow:hidden;}
 .hdr-pat{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.015) 20px,rgba(255,255,255,.015) 21px),repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(255,255,255,.015) 20px,rgba(255,255,255,.015) 21px);}
 .hdr-in{position:relative;max-width:1100px;margin:0 auto;padding:40px 32px 36px;display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;}
@@ -22,7 +22,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);m
 .disc-ico{font-size:20px;flex-shrink:0;margin-top:2px;}
 .disc-txt{font-size:12.5px;color:rgba(255,255,255,.92);line-height:1.65;}
 .disc-txt strong{color:#f5c842;font-weight:600;}
-.main{max-width:1100px;margin:0 auto;padding:32px 24px 80px;}
+.main{max-width:1100px;margin:0 auto;padding:32px 24px 80px;flex:1;}
 .sec-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:10px;}
 .sec-title::after{content:'';flex:1;height:2px;background:linear-gradient(to right,var(--gold),transparent);border-radius:2px;}
 .sec-sub{font-size:12.5px;color:var(--muted);margin-bottom:20px;}
@@ -49,59 +49,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);m
 .ci.sel{background:linear-gradient(90deg,#eef5ff,#f5fbff);}
 .ci.sel .ci-chk{opacity:1;background:var(--teal);color:#fff;border-color:var(--teal);}
 .ci-chk{width:22px;height:22px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;opacity:.5;transition:all .2s;color:transparent;}
-.ci.sel .ci-chk{opacity:1;}
 .ci-code{font-size:12.5px;font-weight:700;color:var(--navy);min-width:100px;}
 .ci-title{font-size:12px;color:var(--muted);line-height:1.3;flex:1;}
-.ci-badge{font-size:10px;padding:2px 7px;border-radius:8px;font-weight:600;background:var(--gold-light);color:var(--gold);white-space:nowrap;flex-shrink:0;}
 .sl-wrap{min-height:100px;max-height:390px;overflow-y:auto;}
-.sl-wrap::-webkit-scrollbar{width:4px;}
-.sl-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
 .si{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--mist);animation:sli .25s cubic-bezier(.34,1.56,.64,1);}
 @keyframes sli{from{opacity:0;transform:translateX(-12px);}to{opacity:1;transform:none;}}
-.si:last-child{border-bottom:none;}
-.si-dot{width:10px;height:10px;border-radius:50%;background:var(--teal);flex-shrink:0;}
 .si-code{font-size:12.5px;font-weight:700;color:var(--navy);min-width:100px;}
 .si-title{font-size:12px;color:var(--muted);flex:1;line-height:1.3;}
 .si-rm{width:24px;height:24px;border-radius:50%;border:none;background:#fff0f0;color:var(--crimson);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .18s;font-weight:700;}
 .si-rm:hover{background:var(--crimson);color:#fff;}
-.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;gap:10px;color:var(--muted);}
-.empty-ico{font-size:36px;opacity:.5;}
-.empty-txt{font-size:13px;text-align:center;line-height:1.5;}
 .act{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:32px;}
 .btn-find{background:linear-gradient(135deg,var(--gold),#e0a030);color:#fff;border:none;padding:14px 32px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(200,146,42,.4);transition:all .2s;}
 .btn-find:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(200,146,42,.55);}
-.btn-find:active{transform:translateY(0);}
-.btn-clr{background:#fff;color:var(--crimson);border:1.5px solid #f5c0c0;padding:13px 20px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .18s;}
-.btn-clr:hover{background:#fff5f5;border-color:var(--crimson);}
-.btn-prt{background:#fff;color:var(--navy);border:1.5px solid var(--border);padding:13px 20px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;margin-left:auto;transition:all .18s;}
-.btn-prt:hover{background:var(--gold-pale);border-color:var(--gold);}
+.btn-clr{background:#fff;color:var(--crimson);border:1.5px solid #f5c0c0;padding:13px 20px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;}
+.btn-prt{background:#fff;color:var(--navy);border:1.5px solid var(--border);padding:13px 20px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;margin-left:auto;}
 #result{display:none;}
-.r-intro{background:linear-gradient(135deg,var(--navy),#1d3a70);border-radius:16px;padding:24px 28px;margin-bottom:28px;display:flex;align-items:center;gap:20px;box-shadow:0 4px 20px rgba(26,46,82,.25);flex-wrap:wrap;}
-.r-intro-ico{font-size:40px;}
-.r-intro-title{font-family:'Playfair Display',serif;font-size:22px;color:#fff;font-weight:700;}
-.r-intro-sub{font-size:13px;color:rgba(255,255,255,.6);margin-top:4px;}
-.r-stats{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap;}
-.stat{background:rgba(255,255,255,.1);color:#fff;border-radius:10px;padding:10px 18px;text-align:center;}
-.stat .n{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold);display:block;line-height:1;}
-.stat .l{font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-top:3px;display:block;}
 .day-block{margin-bottom:24px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px var(--shadow);}
 .day-hdr{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,var(--navy),var(--navy-mid) 60%,#2a4a80);padding:16px 22px;}
 .day-dow{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);}
 .day-full{font-size:12.5px;color:rgba(255,255,255,.55);margin-top:2px;}
-.day-chip{margin-left:auto;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;}
 .th{display:grid;grid-template-columns:140px 1fr 180px;background:#edf1f9;}
 .th div{padding:8px 16px;font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--navy);font-weight:700;}
-.tc{background:#fff;}
-.tr{display:grid;grid-template-columns:140px 1fr 180px;border-bottom:1px solid var(--mist);transition:background .15s;align-items:stretch;}
-.tr:last-child{border-bottom:none;}.tr:hover{background:var(--gold-pale);}
-.tr-code{padding:13px 16px;font-size:13px;font-weight:700;color:var(--navy);border-right:1px solid var(--mist);display:flex;align-items:center;background:rgba(26,46,82,.025);}
+.tr{display:grid;grid-template-columns:140px 1fr 180px;border-bottom:1px solid var(--mist);align-items:stretch;}
+.tr-code{padding:13px 16px;font-size:13px;font-weight:700;color:var(--navy);border-right:1px solid var(--mist);background:rgba(26,46,82,.025);display:flex;align-items:center;}
 .tr-title{padding:13px 16px;font-size:13px;color:var(--ink);display:flex;align-items:center;line-height:1.4;}
-.tr-time{padding:13px 16px;font-size:12.5px;color:var(--teal);font-weight:600;border-left:1px solid var(--mist);display:flex;align-items:center;gap:6px;}
-.r-disc{margin-top:28px;background:linear-gradient(135deg,#fff8f0,#fff3e6);border:1.5px solid #f5c878;border-radius:12px;padding:18px 22px;display:flex;gap:14px;align-items:flex-start;}
-.r-disc-txt{font-size:12.5px;color:#7c4a0a;line-height:1.7;}
-.r-disc-txt strong{color:#7c1a1a;}
-@media print{.hdr-pat,.act,.two,.disc,.sec-title,.sec-sub,.crest{display:none!important;}#result{display:block!important;}body{background:#fff;}.day-hdr{print-color-adjust:exact;-webkit-print-color-adjust:exact;}}
-@media(max-width:600px){.tr,.th{grid-template-columns:1fr;}.tr-code,.tr-time{border:none;border-bottom:1px solid var(--mist);background:none;}.th{display:none;}.hdr-in{padding:24px 16px 20px;}.main{padding:20px 12px 60px;}.r-intro{flex-direction:column;align-items:flex-start;}.r-stats{margin-left:0;}}
+.tr-time{padding:13px 16px;font-size:12.5px;color:var(--teal);font-weight:600;border-left:1px solid var(--mist);display:flex;align-items:center;}
+.footer{background:var(--navy);padding:24px;text-align:center;color:rgba(255,255,255,.5);font-size:13px;border-top:1px solid rgba(255,255,255,.1);}
+@media print{.hdr-pat,.act,.two,.disc,.sec-title,.sec-sub,.crest,.footer{display:none!important;}#result{display:block!important;}body{background:#fff;}.day-hdr{print-color-adjust:exact;-webkit-print-color-adjust:exact;}}
 </style>
 </head>
 <body>
@@ -118,108 +92,156 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);m
 </header>
 <div class="disc">
   <div class="disc-ico">⚠️</div>
-  <div class="disc-txt"><strong>Important Disclaimer:</strong> This tool is provided for convenience only and may <strong>not be 100% accurate</strong>. Exam schedules are subject to change without notice. Always verify with the <strong>official university-provided timetable</strong> or contact the Faculty Examination Unit directly. The developers assume no responsibility for errors or omissions.</div>
+  <div class="disc-txt"><strong>Disclaimer:</strong> This tool is based on Sheet 1 data. Verify with official university notices.</div>
 </div>
 <div class="main">
-  <div class="sec-title" style="margin-bottom:6px;">📚 Step 1 — Select Your Courses</div>
-  <div class="sec-sub">Click any course on the left to add it. Filter by department prefix or use the search box.</div>
   <div class="two">
     <div class="panel">
-      <div class="ph"><span class="ph-ico">📋</span><span class="ph-lbl">All Courses</span><span class="ph-cnt" id="courseCount">–</span></div>
-      <div class="sw"><div class="sr"><span>🔍</span><input type="text" id="searchInput" placeholder="Search by code or title…" oninput="filterCourses()" autocomplete="off"></div></div>
-      <div class="pills" id="filterPills"></div>
+      <div class="ph"><span class="ph-ico">📋</span><span class="ph-lbl">All Courses (Sheet 1)</span><span class="ph-cnt" id="courseCount">0</span></div>
+      <div class="sw"><div class="sr"><span>🔍</span><input type="text" id="searchInput" placeholder="Search code or title…" oninput="filterCourses()"></div></div>
       <div class="cl-wrap" id="courseList"></div>
     </div>
     <div class="panel">
-      <div class="ph"><span class="ph-ico">✅</span><span class="ph-lbl">My Selected Courses</span><span class="ph-cnt" id="selCount">0 selected</span></div>
-      <div class="sl-wrap" id="selList"><div class="empty"><div class="empty-ico">🗂️</div><div class="empty-txt">No courses selected yet.<br>Click a course on the left to add it.</div></div></div>
+      <div class="ph"><span class="ph-ico">✅</span><span class="ph-lbl">Selected Courses</span><span class="ph-cnt" id="selCount">0</span></div>
+      <div class="sl-wrap" id="selList"></div>
     </div>
   </div>
   <div class="act">
     <button class="btn-find" onclick="generate()">🗓 Generate My Timetable</button>
     <button class="btn-clr" onclick="clearAll()">✕ Clear All</button>
-    <button class="btn-prt" onclick="window.print()">🖨 Print</button>
   </div>
   <div id="result"></div>
 </div>
-<script>
-const EXAMS=[{"date": "30.03.2026", "time": "9.00 - 11.00", "code": "BIO 3204", "title": "Bioinformatics"}, {"date": "30.03.2026", "time": "9.00 - 11.00", "code": "CHE 4212", "title": "Pharmaceutical and Medicinal Chemistry"}, {"date": "30.03.2026", "time": "9.00 - 12.00", "code": "HPT 3312", "title": "The Sri Lankan Situation of Major Health Issues"}, {"date": "30.03.2026", "time": "1.00 - 3.00", "code": "BIO 3204", "title": "Bioinformatics - Pra."}, {"date": "30.03.2026", "time": "1.00 - 3.00", "code": "MAT 3222", "title": "Numerical Analysis II"}, {"date": "31.03.2026", "time": "9.00 - 12.00", "code": "FDN 1201", "title": "General English"}, {"date": "31.03.2026", "time": "1.00 - 2.30", "code": "HPT 3111", "title": "Environment and Health"}, {"date": "31.03.2026", "time": "1.00 - 3.00", "code": "BOT 1201", "title": "Plant Diversity"}, {"date": "31.03.2026", "time": "1.00 - 3.00", "code": "PHY 3207", "title": "Energy Resources"}, {"date": "31.03.2026", "time": "1.00 - 3.00", "code": "FDN 1205", "title": "Basic Sciences for Non-Sciences Students"}, {"date": "02.04.2026", "time": "9.00 - 11.00", "code": "CHE 4213", "title": "Chemical Toxiology"}, {"date": "02.04.2026", "time": "9.00 - 12.00", "code": "COM 2304", "title": "Computer Graphics and Image Processing"}, {"date": "02.04.2026", "time": "9.00 - 12.00", "code": "ICT 2403", "title": "Graphics & Image Processing"}, {"date": "02.04.2026", "time": "9.30 - 12.30", "code": "STA 3401", "title": "Statistical Learning Gr.I & Gr.II"}, {"date": "02.04.2026", "time": "9.30 - 11.30", "code": "BOT 1201", "title": "Plant Diversity - Pra. Gr. I & Gr. II"}, {"date": "02.04.2026", "time": "11.45 - 1.45", "code": "BOT 1201", "title": "Plant Diversity - Pra. Gr. III & Gr. IV"}, {"date": "02.04.2026", "time": "2.00 - 4.00", "code": "BOT 1201", "title": "Plant Diversity - Pra. Gr. V & Gr. VI"}, {"date": "02.04.2026", "time": "1.00 - 4.00", "code": "STA 3401", "title": "Statistical Learning Gr.III"}, {"date": "02.04.2026", "time": "1.00 - 2.30", "code": "HPT 3110", "title": "Future Directions in Health Promotion"}, {"date": "06.04.2026", "time": "9.00 - 11.00", "code": "IDC 2201", "title": "English for Professional Purpose"}, {"date": "06.04.2026", "time": "11.30 AM Onwards", "code": "IDC 2201", "title": "English for Professional Purpose Oral Test"}, {"date": "06.04.2026", "time": "1.00 - 2.30", "code": "HPT 3104", "title": "Philosophical & Ethical Issues in Health Education & Promotion"}, {"date": "06.04.2026", "time": "1.00 - 3.00", "code": "PHY 1102", "title": "Waves and Vibrations"}, {"date": "06.04.2026", "time": "1.00 - 4.00", "code": "STA 3402", "title": "Introduction to Neural Networks & Machine Learning"}, {"date": "07.04.2026", "time": "9.00 - 10.30", "code": "HPT 1104", "title": "History and Evolution of Health Promotion"}, {"date": "07.04.2026", "time": "9.00 - 11.00", "code": "CHE 3222", "title": "Electronics and IT for Chemists"}, {"date": "07.04.2026", "time": "9.00 - 11.00", "code": "ZOO 3104", "title": "Laboratary Techniques in Zoology"}, {"date": "07.04.2026", "time": "9.00 - 11.00", "code": "PHY 3210", "title": "Properties of Materials"}, {"date": "07.04.2026", "time": "9.00 - 10.00", "code": "PHY 2101", "title": "Thermodynamics & Radiation"}, {"date": "07.04.2026", "time": "1.00 - 3.00", "code": "HPT 3206", "title": "Report Writing and Assessment"}, {"date": "07.04.2026", "time": "1.00 - 3.00", "code": "COM 1201", "title": "Principles of Programme Design"}, {"date": "07.04.2026", "time": "1.00 - 4.00", "code": "ICT 2402", "title": "Software Engineering"}, {"date": "08.04.2026", "time": "9.00 - 11.00", "code": "BDC 3204", "title": "Wildlife Management & Conservation"}, {"date": "08.04.2026", "time": "9.00 - 11.00", "code": "PHY 3211", "title": "Medical Physics"}, {"date": "08.04.2026", "time": "9.00 - 11.00", "code": "HPT 3205", "title": "Healthy Public Policy and Legislation"}, {"date": "08.04.2026", "time": "9.00 - 12.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr.- I [3-2 (20/21) batch]"}, {"date": "08.04.2026", "time": "9.00 - 12.00", "code": "ICT 1402", "title": "Principles of Programme Design and Programming"}, {"date": "08.04.2026", "time": "9.00 - 12.00", "code": "HPT 4506 - Part I", "title": "Reduction of Tobacco, Alcohol and Other Drug Related Harm Part I"}, {"date": "08.04.2026", "time": "1.00 - 3.00", "code": "HPT 4506 - Part II", "title": "Reduction of Tobacco, Alcohol and Other Drug Related Harm Part II"}, {"date": "08.04.2026", "time": "1.00 - 2.00", "code": "PHY 2103", "title": "Electronics I"}, {"date": "08.04.2026", "time": "1.00 - 3.00", "code": "IDC 3211", "title": "Enterpreneurship and Innovative Management"}, {"date": "08.04.2026", "time": "1.00 - 4.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - II [3-2 (20/21) batch]"}, {"date": "08.04.2026", "time": "1.00 - 4.00", "code": "MAT 4304", "title": "Operational Research II"}, {"date": "09.04.2026", "time": "9.00 - 11.00", "code": "BOT 2204", "title": "Plant Pathology"}, {"date": "09.04.2026", "time": "9.00 - 12.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr.- III [3-2 (20/21) batch]"}, {"date": "09.04.2026", "time": "9.00 - 12.00", "code": "COM 2301", "title": "System Analysis & Design"}, {"date": "09.04.2026", "time": "9.00 - 11.00", "code": "ICT 1402", "title": "Principles of Programme Design and Programming - Pra. Gr. I & II"}, {"date": "09.04.2026", "time": "11.30 - 1.30", "code": "ICT 1402", "title": "Principles of Programme Design and Programming - Pra. Gr. III & IV"}, {"date": "09.04.2026", "time": "1.00 - 3.00", "code": "HPT 3203", "title": "Social Structures and Social Influence"}, {"date": "09.04.2026", "time": "1.00 - 4.00", "code": "MAT 3328", "title": "Non Linear Programming"}, {"date": "09.04.2026", "time": "1.00 - 3.00", "code": "CHE 4201", "title": "Computational Chemistry"}, {"date": "09.04.2026", "time": "1.00 - 3.00", "code": "BOT 2204", "title": "Plant Pathology Pra - Gr. I & II"}, {"date": "09.04.2026", "time": "1.00 - 4.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - IV [3-2 (20/21) batch]"}, {"date": "09.04.2026", "time": "2.00 - 4.00", "code": "ICT 1402", "title": "Principles of Programme Design and Programming - Pra. Gr. V & VI"}, {"date": "09.04.2026", "time": "4.30 - 6.30", "code": "ICT 1402", "title": "Principles of Programme Design and Programming - Pra. Gr. VII & VIII"}, {"date": "09.04.2026", "time": "3.15 - 5.15", "code": "BOT 2204", "title": "Plant Pathology Pra - Gr. III & IV"}, {"date": "10.04.2026", "time": "9.00 - 11.00", "code": "FDN 1203", "title": "General Biology"}, {"date": "10.04.2026", "time": "9.00 - 12.00", "code": "FDN 1204", "title": "Basic Mathematics"}, {"date": "10.04.2026", "time": "", "code": "FDN 1306", "title": "Basic Mathematics for Non Mathematics Students"}, {"date": "10.04.2026", "time": "1.00 - 4.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - V [3-2 (20/21) batch]"}, {"date": "10.04.2026", "time": "2.00 - 4.00", "code": "FDN 1202", "title": "Introduction to Computers"}, {"date": "13.04.2026", "time": "9.00 - 11.00", "code": "MAT 1205", "title": "Real Analysis I"}, {"date": "20.04.2026", "time": "9.00 - 12.00", "code": "BDC 3203", "title": "Introduction to Geographical Information Systems"}, {"date": "20.04.2026", "time": "9.00 - 11.00", "code": "HPT 4204", "title": "Reduction of Suicide"}, {"date": "20.04.2026", "time": "9.00 - 11.00", "code": "MAT 3323", "title": "Methamatical Statistics"}, {"date": "20.04.2026", "time": "9.00 - 11.00", "code": "BDC 4201", "title": "Evironmetal policies and Management"}, {"date": "20.04.2026", "time": "9.00 - 11.00", "code": "HPT 3201", "title": "Family & Community Health Promotion"}, {"date": "20.04.2026", "time": "1.00 - 4.00", "code": "ICT 1404", "title": "Mathematics & Statistics for Computing"}, {"date": "20.04.2026", "time": "1.00 - 3.00", "code": "CHE 3204", "title": "Food Chemistry"}, {"date": "20.04.2026", "time": "1.00 - 3.00", "code": "PHY 2208", "title": "Graphical Progammig for Physics"}, {"date": "14.04.2026", "time": "9.00 - 12.00", "code": "COM 1407", "title": "Principles of Computer Programming"}, {"date": "21.04.2026", "time": "9.00 - 11.00", "code": "BOT 3204", "title": "Flora of Sri Lanka"}, {"date": "21.04.2026", "time": "9.00 - 12.00", "code": "MAT 3325", "title": "Methamatical Statics II"}, {"date": "21.04.2026", "time": "9.00 - 11.00", "code": "IDC 3209", "title": "Managing Organization"}, {"date": "21.04.2026", "time": "9.00 - 12.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - I [3-1 (21/22) batch]"}, {"date": "21.04.2026", "time": "1.00 - 4.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - II [3-1 (21/22) batch]"}, {"date": "21.04.2026", "time": "1.00 - 3.00", "code": "BOT 3204", "title": "Flora of Sri Lanka Pra. Gr. I & Gr II"}, {"date": "21.04.2026", "time": "1.00 - 3.00", "code": "COM 1407", "title": "Principles of Computer Programming - Pra I & II"}, {"date": "21.04.2026", "time": "1.00 - 4.00", "code": "ICT 3301", "title": "Human Computer Interaction"}, {"date": "21.04.2026", "time": "3.30 - 5.30", "code": "COM 1407", "title": "Principles of Computer Programming - Pra III & IV"}, {"date": "21.04.2026", "time": "1.00 - 2.00", "code": "PHY 2109", "title": "Physical Geology"}, {"date": "21.04.2026", "time": "1.00 - 2.30", "code": "HPT 2104", "title": "Introduction to Epidemiology"}, {"date": "21.04.2026", "time": "9.00 - 12.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - III [3-1 (21/22) batch]"}, {"date": "22.04.2026", "time": "9.00 - 11.00", "code": "ZOO 1201", "title": "Invertebrate Diversity"}, {"date": "22.04.2026", "time": "9.00 - 11.00", "code": "MAT 3227", "title": "Financial Mathematics"}, {"date": "22.04.2026", "time": "9.00 - 11.00", "code": "CHE 4203", "title": "Surface and Colloidal Chemistry"}, {"date": "22.04.2026", "time": "1.00 - 4.00", "code": "CHE 3214", "title": "Chemistry Laboratory - Gr. - IV [3-1 (21/22) batch]"}, {"date": "22.04.2026", "time": "1.00 - 2.30", "code": "BIO 3102", "title": "Ecotourism"}, {"date": "22.04.2026", "time": "1.00 - 3.00", "code": "HPT 3202", "title": "Commercial Influences on Health"}, {"date": "22.04.2026", "time": "1.00 - 3.00", "code": "ICT 3215", "title": "Software Quality Management"}, {"date": "22.04.2026", "time": "1.00 - 3.00", "code": "ZOO 1201", "title": "Invertebrate Diversity - Pra. Gr. I & II"}, {"date": "22.04.2026", "time": "3.15 -5.15", "code": "ZOO 1201", "title": "Invertebrate Diversity - Pra. Gr. III & IV"}, {"date": "22.04.2026", "time": "9.00 - 11.00", "code": "ICT 1201", "title": "Fundamentals of Computer Systems"}, {"date": "23.04.2026", "time": "9.00 - 11.00", "code": "MIB 3204", "title": "Food Microbiology"}, {"date": "23.04.2026", "time": "9.00 - 11.00", "code": "PHY 1201", "title": "General Physics"}, {"date": "23.04.2026", "time": "9.00 - 11.00", "code": "HPT 1214/ 1201", "title": "Basic Human Physilogy"}, {"date": "23.04.2026", "time": "9.00 - 03.00", "code": "CHE 3218", "title": "Advanced Organic Chemistry Laboratory"}, {"date": "23.04.2026", "time": "1.00 - 4.00", "code": "COM 3303", "title": "Artificial Intelligence Introduction to Intelligent Systems"}, {"date": "23.04.2026", "time": "1.00 - 3.00", "code": "ICT 3212", "title": ""}, {"date": "23.04.2026", "time": "1.00 - 3.00", "code": "MAT 3221", "title": "Graph Theory"}, {"date": "23.04.2026", "time": "9.00 - 12.00", "code": "HPT 2301", "title": "Psychology and Human Behavior"}, {"date": "24.04.2026", "time": "9.00 - 11.00", "code": "CHE 3209", "title": "Natural Products Chemistry"}, {"date": "24.04.2026", "time": "9.00 - 11.00", "code": "CHE 3213", "title": "Industrial Chemistry"}, {"date": "24.04.2026", "time": "9.00 - 11.00", "code": "BIO 1201", "title": "Cell Biology and Biochemistry (HPT & BIO)"}, {"date": "24.04.2026", "time": "9.00 - 12.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr.VII"}, {"date": "24.04.2026", "time": "1.00 - 4.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr.VIII"}, {"date": "24.04.2026", "time": "2.00 - 4.00", "code": "BDC 3202", "title": "Environmental Impact & Risk Assessment"}, {"date": "24.04.2026", "time": "2.00 - 4.00", "code": "ICT 3202", "title": "Operational Research"}, {"date": "24.04.2026", "time": "9.00 -11.00", "code": "MAT 1206", "title": "Introduction to Math LAB - Gr.I"}, {"date": "27.04.2026", "time": "9.00 - 11.00", "code": "MIB 3202", "title": "Soil Microbiology"}, {"date": "27.04.2026", "time": "9.00 - 11.00", "code": "ZOO 2203", "title": "Animal Behavior"}, {"date": "27.04.2026", "time": "11.30 - 1.30", "code": "MAT 1206", "title": "Introduction to Math LAB - Gr.II"}, {"date": "27.04.2026", "time": "1.00 - 4.00", "code": "CHE 3311", "title": "Advanced Analytical Chemistry II"}, {"date": "27.04.2026", "time": "1.00 - 4.00", "code": "CHE 2107", "title": "Organic Chemistry Laboratory Pra - Gr. I"}, {"date": "27.04.2026", "time": "1.00 - 4.00", "code": "MAT 2306", "title": "Operation Research I"}, {"date": "27.04.2026", "time": "8.30 AM onwards", "code": "HPF 3205", "title": "Final Evaluation of Field Settings"}, {"date": "27.04.2026", "time": "", "code": "HPF 3206", "title": "Project Report Writing"}, {"date": "27.04.2026", "time": "", "code": "HPF 3207", "title": "Follow Up and Continuing Contact with Communities"}, {"date": "27.04.2026", "time": "9.00 - 12.00", "code": "CHE 2107", "title": "Organic Chemistry Laboratory Pra - Gr. II"}, {"date": "28.04.2026", "time": "9.00 - 11.00", "code": "MIB 3201", "title": "Industrial Microbiology"}, {"date": "28.04.2026", "time": "9.00 - 11.00", "code": "BIO 1201", "title": "Cell Biology and Biochemistry Pra - Gr. I & II"}, {"date": "28.04.2026", "time": "11.30 - 1.30", "code": "BIO 1201", "title": "Cell Biology and Biochemistry Pra - Gr. III & IV"}, {"date": "28.04.2026", "time": "2.00 - 4.00", "code": "BIO 1201", "title": "Cell Biology and Biochemistry Pra - Gr. V & VI"}, {"date": "28.04.2026", "time": "4.30 - 6.30", "code": "BIO 1201", "title": "Cell Biology and Biochemistry Pra - Gr. VII & VIII"}, {"date": "28.04.2026", "time": "1.00 - 4.00", "code": "CHE 2107", "title": "Organic Chemistry Laboratory Pra - Gr. III"}, {"date": "28.04.2026", "time": "1.00 - 3.00", "code": "CHE 3206", "title": "Chemical and Process Technology"}, {"date": "28.04.2026", "time": "1.00 - 4.00", "code": "MAT 4309", "title": "Combinatorics"}, {"date": "28.04.2026", "time": "1.00 - 3.00", "code": "ICT 3216", "title": "Introduction to Ethical Hacking"}, {"date": "28.04.2026", "time": "8.30 AM onwards", "code": "HPF 3205", "title": "Final Evaluation of Field Settings"}, {"date": "28.04.2026", "time": "", "code": "HPF 3206", "title": "Project Report Writing"}, {"date": "28.04.2026", "time": "", "code": "HPF 3207", "title": "Follow Up and Continuing Contact with Communities"}, {"date": "28.04.2026", "time": "9.00 - 12.00", "code": "CHE 2107", "title": "Organic Chemistry Laboratory Pra - Gr. IV"}, {"date": "29.04.2026", "time": "9.00 - 11.00", "code": "ZOO 3203", "title": "Economic Entomology"}, {"date": "29.04.2026", "time": "9.00 - 11.00", "code": "BIO 3205", "title": "Ecotoxicology"}, {"date": "29.04.2026", "time": "9.00 - 11.00", "code": "PHY 4215", "title": "Applied Geophysics"}, {"date": "29.04.2026", "time": "1.00 - 4.00", "code": "CHE 2107", "title": "Organic Chemistry Laboratory Pra - Gr. V"}, {"date": "29.04.2026", "time": "1.00 - 2.30", "code": "ZOO 3203", "title": "Economic Entomology - Pra. Gr I"}, {"date": "29.04.2026", "time": "1.00 - 3.00", "code": "MIB 3205", "title": "Plant-Microbe Interactions"}, {"date": "29.04.2026", "time": "1.00 - 3.00", "code": "PHY 3203", "title": "Physical Oceanography"}, {"date": "29.04.2026", "time": "1.00 - 4.00", "code": "HPT 2302", "title": "Working with Communities"}, {"date": "29.04.2026", "time": "1.00 - 3.00", "code": "ICT 3207", "title": "Professional Practice & Ethics"}, {"date": "30.04.2026", "time": "9.00 - 11.00", "code": "PHY 4201", "title": "Biophysics"}, {"date": "30.04.2026", "time": "9.00 - 11.00", "code": "HPT 1215/1202", "title": "Introduction to Human Diseases"}, {"date": "30.04.2026", "time": "9.00 -10.00", "code": "CHE 3120", "title": "Calculations in Chemistry"}, {"date": "30.04.2026", "time": "9.00 - 11.00", "code": "CHE 2202", "title": "Organic Chemistry II"}, {"date": "30.04.2026", "time": "1.00 - 3.00", "code": "BIO 3201", "title": "Molecular Biology"}, {"date": "30.04.2026", "time": "1.00 - 4.00", "code": "MAT 3329", "title": "Network Optimization"}, {"date": "30.04.2026", "time": "1.00 - 3.00", "code": "MAT 3224", "title": "Partial Differential Equations"}, {"date": "04.05.2025", "time": "9.00 - 11.00", "code": "BIO 3203", "title": "Environmental Pollution"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "CHE 3207", "title": "Electrochemistry"}, {"date": "04.05.2026", "time": "9.00 AM Onwards", "code": "FDN 1201", "title": "General English Oral Test"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "ICT 3214", "title": "Mobile Application Developmet"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "CHE 2205", "title": "Inorganic Chemistry"}, {"date": "04.05.2026", "time": "1.00 - 3.00", "code": "BOT 3201", "title": "Plant Tissue Culture"}, {"date": "04.05.2026", "time": "1.00 - 4.00", "code": "COM 3401", "title": "Data Communication and Networking"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "ICT 3213", "title": "Advance Operating Systems"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "MAT 3226", "title": "Operational Research II"}, {"date": "04.05.2026", "time": "9.00 - 11.00", "code": "MIB 3203", "title": "Virology"}, {"date": "04.05.2026", "time": "1.00 - 4.00", "code": "BDC 3301", "title": "Concepts of Biodiversity Conservation"}, {"date": "04.05.2026", "time": "1.00 - 2.30", "code": "HPT 2103", "title": "Principles of Evaluation"}, {"date": "04.05.2026", "time": "1.00 - 4.00", "code": "STA 2304", "title": "Regression Analysis"}, {"date": "04.05.2026", "time": "1.00 - 4.00", "code": "STA 1303", "title": "Mathematics for Statistics"}, {"date": "04.05.2026", "time": "1.00 - 3.00", "code": "IDC 3203", "title": "Human Resourse Management"}, {"date": "06.05.2025", "time": "9.00 - 11.00", "code": "BOT 1202", "title": "Functional Plant Anatomy and Basic Wood Science"}, {"date": "06.05.2026", "time": "9.00 - 11.00", "code": "MAT 1201", "title": "Mathematicals Methods I"}, {"date": "06.05.2026", "time": "9.00 - 11.00", "code": "CHE 3202", "title": "Advanced Biochemistry"}, {"date": "06.05.2026", "time": "9.00 - 11.00", "code": "PHY 4203", "title": "Classical Mechanics"}, {"date": "06.05.2026", "time": "9.00 - 10.30", "code": "HPT 1103", "title": "Concepts of Health"}, {"date": "06.05.2026", "time": "1.00 - 3.00", "code": "CHE 3208", "title": "Enviornmental Chemistry"}, {"date": "06.05.2026", "time": "1.00 - 3.00", "code": "MIB 3208", "title": "Enviornmenal Microbiology"}, {"date": "06.05.2026", "time": "1.00 -2.45", "code": "BOT 1202", "title": "Functional Plant Anatomy and Basic Wood Science - Pra. Gr. I & II"}, {"date": "06.05.2026", "time": "3.00 - 4.45", "code": "BOT 1202", "title": "Functional Plant Anatomy and Basic Wood Science - Pra. Gr. III & IV"}, {"date": "07.05.2025", "time": "9.00 - 12.00", "code": "ICT 2301", "title": "Design and Analysis of Algorithms"}, {"date": "07.05.2026", "time": "9.00 - 11.00", "code": "PHY 3209", "title": "Solid State Physics"}, {"date": "07.05.2026", "time": "9.00 - 11.00", "code": "BOT 2201", "title": "Plant Physiology"}, {"date": "07.05.2026", "time": "1.00 - 3.00/\n1.00 - 4.00", "code": "MAT 1204 / MAP 1302", "title": "Differential Equations I"}, {"date": "07.05.2026", "time": "1.00 - 3.00", "code": "HPT 1205", "title": "Communication in Public Health"}, {"date": "07.05.2026", "time": "1.00 - 3.00", "code": "BOT 2201", "title": "Plant Physiology Pra. Gr. I & II"}, {"date": "07.05.2026", "time": "3.15 - 5.15", "code": "BOT 2201", "title": "Plant Physiology Pra. Gr. III"}, {"date": "08.05.2025", "time": "9.00 - 11.00", "code": "CHE 3203", "title": "Chemistry of Polymers"}, {"date": "08.05.2026", "time": "9.00 - 12.00", "code": "COM 3306", "title": "Operating Systems"}, {"date": "08.05.2026", "time": "9.00 - 11.00", "code": "STA 2207", "title": "Introduction to R/Python Stastical Language - Gr. I"}, {"date": "08.05.2026", "time": "11.30 - 1.30", "code": "STA 2207", "title": "Introduction to R/Python Stastical Language - Gr. II"}, {"date": "08.05.2026", "time": "2.00 - 4.00", "code": "CHE 1201", "title": "General Chemistry"}, {"date": "08.05.2026", "time": "8.30 AM onwards", "code": "HPF 3101", "title": "Reporting Health Changes in Student Groups"}, {"date": "11.05.2025", "time": "9.00 -11.00", "code": "BOT 3203", "title": "Postharvest Technology of Plant Products"}, {"date": "11.05.2026", "time": "9.00 - 11.00", "code": "MIB 3207", "title": "Immunology"}, {"date": "11.05.2026", "time": "9.00 - 11.00", "code": "PHY 3212", "title": "Electronics II"}, {"date": "11.05.2026", "time": "9.00 - 12.00", "code": "MAT 4307", "title": "Design of Experiments"}, {"date": "11.05.2026", "time": "9.00 - 12.00", "code": "ICT 3304", "title": "Embedded Systems"}, {"date": "11.05.2026", "time": "9.00 - 12.00", "code": "COM 3307", "title": "Embedded Systems"}, {"date": "11.05.2026", "time": "9.00 - 3.00", "code": "CHE 3219", "title": "Advanced Physical Chemistry Laboratory"}, {"date": "11.05.2026", "time": "1.00 - 3.00", "code": "IDC 2202", "title": "Management Information System"}, {"date": "11.05.2026", "time": "1.00 - 3.00", "code": "STA 1202", "title": "Introduction to Probability"}, {"date": "11.05.2026", "time": "8.30 AM onwards", "code": "HPF 3302", "title": "Addressing Obstacles to Progress with Communities"}, {"date": "11.05.2026", "time": "", "code": "HPF 3103", "title": "Reviewing Progress with Communities and Redirecting Efforts"}, {"date": "11.05.2026", "time": "", "code": "HPF 3204", "title": "Progress Evaluation"}, {"date": "12.05.2026", "time": "9.00 - 11.00", "code": "BOT 3202", "title": "Principles and Practices of Horticulture and Landscaping"}, {"date": "12.05.2027", "time": "9.00 - 11.00", "code": "ZOO 2201", "title": "Animal Histology and Physiology"}, {"date": "12.05.2027", "time": "9.00 - 12.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. I"}, {"date": "12.05.2027", "time": "1.00 - 4.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. II"}, {"date": "12.05.2027", "time": "1.00 - 2.45", "code": "ZOO 2201", "title": "Animal Histology and Physiology Pra - Gr. I & II"}, {"date": "12.05.2027", "time": "3.00 - 4.45", "code": "ZOO 2201", "title": "Animal Histology and Physiology Pra - Gr. III & IV"}, {"date": "12.05.2027", "time": "1.00 - 3.00", "code": "MAT 2203", "title": "Complex Calculus"}, {"date": "12.05.2027", "time": "1.00 - 3.00", "code": "COM 3204", "title": "Information Security"}, {"date": "12.05.2027", "time": "1.00 - 4.00", "code": "ICT 3303", "title": "Information Systems Security"}, {"date": "12.05.2027", "time": "1.00 - 3.00", "code": "IDC 3212", "title": "Operation and Total Quality Management"}, {"date": "12.05.2027", "time": "8.30 AM onwards", "code": "HPF 3103", "title": "Reviewing Progress with Communities and Redirecting Efforts"}, {"date": "12.05.2027", "time": "", "code": "HPF 3204", "title": "Progress Evaluation"}, {"date": "13.05.2026", "time": "9.00 - 11.00", "code": "BIO 3206", "title": "Experiments Design & Nonparametric Methods in Statistics"}, {"date": "13.05.2027", "time": "9.00 - 12.00", "code": "MAT 2305", "title": "Real Analysis II"}, {"date": "13.05.2027", "time": "9.00 - 11.00", "code": "MIB 3206", "title": "Analytical Techniques in Molecular Biology"}, {"date": "13.05.2027", "time": "9.00 - 11.00", "code": "PHY 4211", "title": "Nanomaterials and Nanotechnology"}, {"date": "13.05.2027", "time": "9.00 - 12.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. III"}, {"date": "13.05.2027", "time": "1.00 - 4.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. IV"}, {"date": "13.05.2027", "time": "1.00 - 4.00", "code": "PHY 3302", "title": "Methamatical Methods for Physicists"}, {"date": "13.05.2027", "time": "1.00 - 3.00", "code": "ICT 3209", "title": "Principles of Accounting"}, {"date": "13.05.2027", "time": "8.30 AM onwards", "code": "HPF 2201", "title": "Applying Measures to Improve Health Status of a Student Group"}, {"date": "14.05.2025", "time": "9.00 - 11.00", "code": "ZOO 2204", "title": "Fish Biology"}, {"date": "14.05.2026", "time": "9.00 - 11.00", "code": "ICT 2204", "title": "Web Technologies Web Design"}, {"date": "14.05.2026", "time": "9.00 - 12.00", "code": "COM 2303", "title": ""}, {"date": "14.05.2026", "time": "1.00 - 3.00", "code": "ZOO 2204", "title": "Fish Biology Pra - Gr. I &II"}, {"date": "14.05.2026", "time": "3.15 - 5.15", "code": "ZOO 2204", "title": "Fish Biology- Pra. III"}, {"date": "14.05.2026", "time": "9.00 - 12.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. V"}, {"date": "14.05.2026", "time": "1.00 - 4.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. VI"}, {"date": "14.05.2026", "time": "1.00 - 3.00", "code": "MAT 3329", "title": "Network Optimization"}, {"date": "14.05.2026", "time": "8.30 AM onwards", "code": "HPF 2102", "title": "Introduction to Field Settings"}, {"date": "14.05.2026", "time": "", "code": "HPF 2103", "title": "Engagement of Communities"}, {"date": "14.05.2026", "time": "", "code": "HPF 2204", "title": "Clarifying Health Issues with Assigned Communities"}, {"date": "14.05.2026", "time": "", "code": "HPF 2105", "title": "Devising Measures of Health in Partnership with Communities"}, {"date": "15.05.2025", "time": "9.00 - 11.00", "code": "CHE 3215", "title": "Heterocyclic and Synthetic Organic chemistry"}, {"date": "15.05.2026", "time": "9.00 - 12.00", "code": "ICT 1303", "title": "Basic Electronics and Digital Logic Design"}, {"date": "15.05.2026", "time": "9.00 - 11.00", "code": "ZOO 3201", "title": "Medical Entomology"}, {"date": "15.05.2026", "time": "9.00 - 12.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. V"}, {"date": "15.05.2026", "time": "9.00 - 11.00", "code": "PHY 3215", "title": "Practical Unit - Gr. I"}, {"date": "15.05.2026", "time": "11.15 - 1.15", "code": "PHY 3215", "title": "Practical Unit - Gr. II"}, {"date": "15.05.2026", "time": "1.00 - 4.00", "code": "CHE 1104", "title": "Inorganic Chemistry Laboratory - Gr. VI"}, {"date": "15.05.2026", "time": "2.00 - 4.00", "code": "ZOO 3201", "title": "Medical Entomology - Pra"}, {"date": "15.05.2026", "time": "2.00 - 3.00", "code": "PHY 2105", "title": "Quantum Machanics"}, {"date": "15.05.2026", "time": "8.30 AM onwards", "code": "HPF 2102", "title": "Introduction to Field Settings"}, {"date": "15.05.2026", "time": "", "code": "HPF 2103", "title": "Engagement of Communities"}, {"date": "15.05.2026", "time": "", "code": "HPF 2204", "title": "Clarifying Health Issues with Assigned Communities"}, {"date": "15.05.2026", "time": "", "code": "HPF 2105", "title": "Devising Measures of Health in Partnership with Communities"}, {"date": "27.04.2026", "time": "9.00 -11.00", "code": "MAT 1206", "title": "Introduction to Math LAB - Gr.I"}];
+<footer class="footer">
+  &copy; NetworkChukka
+</footer>
 
-const courseMap={};
-EXAMS.forEach(e=>{
-  const code=e.code.trim();
-  const prefix=(code.match(/^([A-Z]+)/)||['','OTH'])[1];
-  if(!courseMap[code])courseMap[code]={code,title:e.title||code,prefix};
-});
-const ALL=Object.values(courseMap).sort((a,b)=>a.code.localeCompare(b.code));
-const PFXS=[...new Set(ALL.map(c=>c.prefix))].sort();
-let sel=new Set(),pfx='ALL',q='';
+<script>
+const EXAMS = [
+  {"date":"30.03.2026","time":"9.00 - 11.00","code":"BIO 3204","title":"Bioinformatics"},
+  {"date":"30.03.2026","time":"9.00 - 11.00","code":"CHE 4212","title":"Pharmaceutical and Medicinal Chemistry"},
+  {"date":"30.03.2026","time":"9.00 - 12.00","code":"HPT 3312","title":"The Sri Lankan Situation of Major Health Issues"},
+  {"date":"30.03.2026","time":"1.00 - 3.00","code":"BIO 3204","title":"Bioinformatics - Pra."},
+  {"date":"30.03.2026","time":"1.00 - 3.00","code":"MAT 3222","title":"Numerical Analysis II"},
+  {"date":"31.03.2026","time":"9.00 - 12.00","code":"FDN 1201","title":"General English"},
+  {"date":"31.03.2026","time":"1.00 - 2.30","code":"HPT 3111","title":"Environment and Health"},
+  {"date":"31.03.2026","time":"1.00 - 3.00","code":"BOT 1201","title":"Plant Diversity"},
+  {"date":"31.03.2026","time":"1.00 - 3.00","code":"PHY 3207","title":"Energy Resources"},
+  {"date":"02.04.2026","time":"9.00 - 11.00","code":"CHE 4213","title":"Chemical Toxiology"},
+  {"date":"02.04.2026","time":"9.00 - 12.00","code":"COM 2304","title":"Computer Graphics and Image Processing"},
+  {"date":"06.04.2026","time":"9.00 - 11.00","code":"IDC 2201","title":"English for Professional Purpose"},
+  {"date":"07.04.2026","time":"9.00 - 11.00","code":"CHE 3222","title":"Electronics and IT for Chemists"},
+  {"date":"08.04.2026","time":"9.00 - 11.00","code":"BDC 3204","title":"Wildlife Management & Conservation"},
+  {"date":"09.04.2026","time":"9.00 - 11.00","code":"BOT 2204","title":"Plant Pathology"},
+  {"date":"10.04.2026","time":"9.00 - 12.00","code":"FDN 1204","title":"Basic Mathematics"},
+  {"date":"20.04.2026","time":"9.00 - 12.00","code":"BDC 3203","title":"Introduction to Geographical Information Systems"},
+  {"date":"21.04.2026","time":"9.00 - 11.00","code":"BOT 3204","title":"Flora of Sri Lanka"},
+  {"date":"22.04.2026","time":"9.00 - 11.00","code":"ZOO 1201","title":"Invertebrate Diversity"},
+  {"date":"23.04.2026","time":"9.00 - 11.00","code":"MIB 3204","title":"Food Microbiology"},
+  {"date":"24.04.2026","time":"9.00 - 11.00","code":"CHE 3209","title":"Natural Products Chemistry"},
+  {"date":"27.04.2026","time":"9.00 - 11.00","code":"MIB 3202","title":"Soil Microbiology"}
+];
+
+let selectedCodes = new Set();
 
 function init(){
-  document.getElementById('filterPills').innerHTML=
-    '<span class="pill active" onclick="setPfx(\'ALL\',this)">All</span>'+
-    PFXS.map(p=>`<span class="pill" onclick="setPfx('${p}',this)">${p}</span>`).join('');
-  render();
+  const unique = Array.from(new Set(EXAMS.map(e => e.code))).sort();
+  document.getElementById('courseCount').innerText = unique.length;
+  renderCourses(unique);
 }
-function setPfx(p,el){pfx=p;document.querySelectorAll('.pills .pill').forEach(x=>x.classList.remove('active'));el.classList.add('active');render();}
-function filterCourses(){q=document.getElementById('searchInput').value.toLowerCase().trim();render();}
-function render(){
-  let list=ALL;
-  if(pfx!=='ALL')list=list.filter(c=>c.prefix===pfx);
-  if(q)list=list.filter(c=>c.code.toLowerCase().includes(q)||c.title.toLowerCase().includes(q));
-  document.getElementById('courseCount').textContent=list.length+' course'+(list.length!==1?'s':'');
-  const el=document.getElementById('courseList');
-  if(!list.length){el.innerHTML='<div class="empty"><div class="empty-ico">🔎</div><div class="empty-txt">No courses match your search.</div></div>';return;}
-  el.innerHTML=list.map(c=>{
-    const s=sel.has(c.code);
-    return `<div class="ci${s?' sel':''}" onclick='toggle(${JSON.stringify(c.code)})'>
-      <div class="ci-chk">${s?'✓':''}</div>
-      <div class="ci-code">${c.code}</div>
-      <div class="ci-title">${c.title}</div>
-      <div class="ci-badge">${c.prefix}</div>
+
+function renderCourses(codes){
+  const list = document.getElementById('courseList');
+  list.innerHTML = codes.map(code => {
+    const title = EXAMS.find(e => e.code === code).title;
+    const isSel = selectedCodes.has(code);
+    return `<div class="ci ${isSel?'sel':''}" onclick="toggle('${code}')">
+      <div class="ci-chk">✔</div>
+      <div class="ci-code">${code}</div>
+      <div class="ci-title">${title}</div>
     </div>`;
   }).join('');
 }
-function toggle(code){sel.has(code)?sel.delete(code):sel.add(code);render();renderSel();document.getElementById('selCount').textContent=sel.size+' selected';}
-function renderSel(){
-  const el=document.getElementById('selList');
-  if(!sel.size){el.innerHTML='<div class="empty"><div class="empty-ico">🗂️</div><div class="empty-txt">No courses selected yet.<br>Click a course on the left to add it.</div></div>';return;}
-  el.innerHTML=[...sel].map(code=>{
-    const c=courseMap[code]||{code,title:code};
-    return `<div class="si"><div class="si-dot"></div><div class="si-code">${c.code}</div><div class="si-title">${c.title}</div><button class="si-rm" onclick='toggle(${JSON.stringify(code)})'>×</button></div>`;
+
+function toggle(code){
+  if(selectedCodes.has(code)) selectedCodes.delete(code);
+  else selectedCodes.add(code);
+  updateSelected();
+  filterCourses();
+}
+
+function updateSelected(){
+  const list = document.getElementById('selList');
+  document.getElementById('selCount').innerText = selectedCodes.size;
+  if(selectedCodes.size === 0){
+    list.innerHTML = '<div class="empty">No courses selected</div>';
+    return;
+  }
+  list.innerHTML = Array.from(selectedCodes).map(code => {
+    const title = EXAMS.find(e => e.code === code).title;
+    return `<div class="si">
+      <div class="si-code">${code}</div>
+      <div class="si-title">${title}</div>
+      <button class="si-rm" onclick="toggle('${code}')">×</button>
+    </div>`;
   }).join('');
 }
-function clearAll(){
-  sel.clear();q='';document.getElementById('searchInput').value='';pfx='ALL';
-  document.querySelectorAll('.pills .pill').forEach((x,i)=>x.classList.toggle('active',i===0));
-  render();renderSel();document.getElementById('selCount').textContent='0 selected';
-  document.getElementById('result').style.display='none';
+
+function filterCourses(){
+  const term = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = Array.from(new Set(EXAMS.map(e => e.code)))
+    .filter(code => {
+      const title = EXAMS.find(e => e.code === code).title.toLowerCase();
+      return code.toLowerCase().includes(term) || title.includes(term);
+    }).sort();
+  renderCourses(filtered);
 }
-function parseDate(d){if(!d)return null;const m=d.match(/(\d{2})\.(\d{2})\.(\d{4})/);return m?new Date(`${m[3]}-${m[2]}-${m[1]}`):null;}
+
 function generate(){
-  const rd=document.getElementById('result');
-  if(!sel.size){rd.style.display='block';rd.innerHTML='<div style="background:#fff3cd;border:1.5px solid #f5c842;border-radius:12px;padding:20px 24px;color:#7c4a0a;font-size:14px;display:flex;align-items:center;gap:12px;"><span style="font-size:24px;">⚠️</span>Please select at least one course before generating your timetable.</div>';rd.scrollIntoView({behavior:'smooth'});return;}
-  const codes=[...sel];
-  const matched=EXAMS.filter(e=>codes.includes(e.code.trim()));
-  const byDate={};
-  matched.forEach(e=>{const k=e.date||'TBC';(byDate[k]=byDate[k]||[]).push(e);});
-  const sorted=Object.keys(byDate).sort((a,b)=>{const da=parseDate(a),db=parseDate(b);if(!da&&!db)return 0;if(!da)return 1;if(!db)return-1;return da-db;});
-  let html=`<div class="r-intro"><div class="r-intro-ico">🎓</div><div><div class="r-intro-title">Your Personal Exam Schedule</div><div class="r-intro-sub">${codes.length} course${codes.length>1?'s':''} · ${new Date().toLocaleDateString('en-GB',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</div></div><div class="r-stats"><div class="stat"><span class="n">${matched.length}</span><span class="l">Sessions</span></div><div class="stat"><span class="n">${sorted.length}</span><span class="l">Exam Days</span></div></div></div>`;
-  if(!matched.length){
-    html+='<div class="empty" style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:48px;"><div class="empty-ico">😕</div><div class="empty-txt">No sessions found for the selected courses.</div></div>';
-  }else{
-    sorted.forEach(date=>{
-      const exams=byDate[date];
-      const p=parseDate(date);
-      const dow=p?p.toLocaleDateString('en-GB',{weekday:'long'}):date;
-      const full=p?p.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
-      html+=`<div class="day-block"><div class="day-hdr"><div><div class="day-dow">${dow}</div><div class="day-full">${full}</div></div><div class="day-chip">${exams.length} session${exams.length>1?'s':''}</div></div><div class="th"><div>Course Code</div><div>Title</div><div>Time</div></div><div class="tc">${exams.map(e=>`<div class="tr"><div class="tr-code">${e.code}</div><div class="tr-title">${e.title||'—'}</div><div class="tr-time">🕐 ${e.time||'See notice'}</div></div>`).join('')}</div></div>`;
-    });
-  }
-  html+=`<div class="r-disc"><span style="font-size:22px;flex-shrink:0;">⚠️</span><div class="r-disc-txt"><strong>Reminder — Always verify with your official timetable.</strong><br>This schedule is generated from a digital copy and may contain errors or be outdated. It is <strong>not guaranteed to be 100% accurate</strong>. Always confirm dates, times, and venues with the <strong>official university-issued timetable</strong> or the Faculty Examination Unit before sitting your exams.</div></div>`;
-  rd.innerHTML=html;rd.style.display='block';
-  setTimeout(()=>rd.scrollIntoView({behavior:'smooth',block:'start'}),80);
+  const res = document.getElementById('result');
+  if(selectedCodes.size === 0) return alert("Select at least one course");
+  
+  const filtered = EXAMS.filter(e => selectedCodes.has(e.code));
+  const groups = {};
+  filtered.forEach(e => {
+    if(!groups[e.date]) groups[e.date] = [];
+    groups[e.date].push(e);
+  });
+  
+  const sortedDates = Object.keys(groups).sort((a,b) => {
+    const da = a.split('.').reverse().join('');
+    const db = b.split('.').reverse().join('');
+    return da.localeCompare(db);
+  });
+
+  res.style.display = 'block';
+  res.innerHTML = sortedDates.map(date => {
+    const rows = groups[date].map(e => `
+      <div class="tr">
+        <div class="tr-code">${e.code}</div>
+        <div class="tr-title">${e.title}</div>
+        <div class="tr-time">🕐 ${e.time}</div>
+      </div>
+    `).join('');
+    return `
+      <div class="day-block">
+        <div class="day-hdr">
+          <div class="day-dow">${date}</div>
+        </div>
+        <div class="th"><div>Code</div><div>Title</div><div>Time</div></div>
+        <div class="tc">${rows}</div>
+      </div>
+    `;
+  }).join('');
 }
+
+function clearAll(){
+  selectedCodes.clear();
+  updateSelected();
+  filterCourses();
+  document.getElementById('result').style.display = 'none';
+}
+
 init();
 </script>
 </body>
