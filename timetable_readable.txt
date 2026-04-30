@@ -1,0 +1,317 @@
+RUSL FAS Examination Timetable - March/May/June 2026
+Verified from official PDF (updated 28 April 2026)
+======================================================================
+
+27.04.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           COM 3306               L11                       Operating Systems
+  1.00 - 3.00            BDC 3202               L1, L11                   Environmental Impact & Risk Assessment
+  1.00 - 4.00            ICT 3301               L10                       Human Computer Interaction
+  1.00 - 3.00            PHY 4215               —                         Applied Geophysics
+  8.30 AM onwards        HPF 3205               Auditorium                Final Evaluation of Field Settings
+  8.30 AM onwards        HPF 3206               Auditorium                Project Report Writing
+  8.30 AM onwards        HPF 3207               Auditorium                Follow Up and Continuing Contact with Communities
+
+28.04.2026
+----------------------------------------------------------------------
+  8.30 AM onwards        HPF 3205               L5                        Final Evaluation of Field Settings
+  8.30 AM onwards        HPF 3206               L5                        Project Report Writing
+  8.30 AM onwards        HPF 3207               L5                        Follow Up and Continuing Contact with Communities
+  9.00 - 11.00           MIB 3207               L7                        Immunology
+  1.00 - 3.00            IDC 3212               L8                        Operation and Total Quality Management
+
+30.04.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ICT 3215               L8                        Software Quality Management
+  9.00 - 11.00           MIB 3206               L1                        Analytical Techniques in Molecular Biology
+  1.00 - 3.00            IDC 3203               L11, L7                   Human Resource Management
+
+04.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ZOO 3104               ZOO Lab                   Laboratory Techniques in Zoology
+  9.00 - 10.00           PHY 2101               L8                        Thermodynamics & Radiation
+  9.00 - 12.00           COM 3401               L7                        Data Communication and Networking
+  9.00 - 11.00           BOT 3201               —                         Plant Tissue Culture
+  9.00 - 12.00           ICT 2402               Convocation Hall          Software Engineering
+  1.00 - 3.00            HPT 3206               L8                        Report Writing and Assessment
+  1.00 - 3.00            COM 1201               L11, L7                   Principles of Programme Design
+
+05.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           CHE 4203               L7                        Surface and Colloidal Chemistry
+  9.00 - 11.00           BDC 4205               —                         Economics of Biodiversity
+  1.00 - 2.30            HPT 2103               L11                       Principles of Evaluation
+  1.00 - 2.00            PHY 2103               L8                        Electronics I
+  1.00 - 3.00            IDC 3211               Auditorium                Entrepreneurship and Innovative Management
+  1.00 - 4.00            MAT 3325               L7                        Mathematical Statistics II
+
+06.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           CHE 2202               Auditorium, L8            Organic Chemistry II
+  9.00 - 12.00           ICT 1402               Convocation Hall          Principles of Programme Design and Programming
+  1.00 - 3.00            MAT 1205               L11, L7                   Real Analysis I
+
+07.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BIO 3205               L7                        Ecotoxicology
+  9.00 - 12.00           COM 2301               L11, L8                   System Analysis & Design
+  1.00 - 3.00            HPT 3203               L8                        Social Structures and Social Influence
+  9.00 - 11.00           ICT 1402               Main Com. Lab, Com Lab/FMGT Principles of Programme Design and Programming - Pra. Gr. I, II, III & IV
+  11.30 - 1.30           ICT 1402               CS Lab, IT Lab            Principles of Programme Design and Programming - Pra. Gr. I, II, III & IV
+  1.00 - 3.00            CHE 3213               L8                        Industrial Chemistry
+
+08.05.2026
+----------------------------------------------------------------------
+  9.30 - 12.30           STA 3401               CS Lab & IT Lab           Statistical Learning Gr.I & Gr.II
+  1.00 - 4.00            STA 3401               CS Lab & IT Lab           Statistical Learning Gr.III & Gr.IV
+  9.00 - 11.00           PHY 3215               PHY LAB                   Practical Unit - Gr. I
+  11.15 - 1.15           PHY 3215               PHY LAB                   Practical Unit - Gr. II
+
+11.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           HPT 3201               L8, Auditorium            Family & Community Health Promotion
+  9.00 - 11.00           ICT 3209               L11                       Principles of Accounting
+  9.00 - 11.00           IDC 3209               Auditorium                Managing Organization
+  9.00 - 12.00           MAT 3328               —                         Non Linear Programming
+  9.00 - 11.00           BDC 3203               L8                        Introduction to Geographical Information Systems
+  9.00 - 11.00           BOT 3204               —                         Flora of Sri Lanka
+  1.00 - 4.00            BDC 3203               CS Lab                    Introduction to Geographic Information System (Pra.)
+  1.00 - 4.00            CHE 3214               CHE LAB                   Chemistry Laboratory - Gr. I [3-1 (21/22) batch]
+  1.00 - 3.00            PHY 3207               L7                        Energy Resources
+  1.00 - 3.00            MIB 3205               L7                        Plant-Microbe Interactions
+  1.00 - 3.00            PHY 2208               IT Lab                    Graphical Programming for Physics
+  1.00 - 3.00            BOT 3204               BOT LAB                   Flora of Sri Lanka Pra. Gr. I
+
+12.05.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           COM 1407               Auditorium, L1            Principles of Computer Programming
+  9.00 - 12.00           CHE 3214               CHE LAB                   Chemistry Laboratory - Gr. II [3-1 (21/22) batch]
+  1.00 - 4.00            CHE 3214               CHE LAB                   Chemistry Laboratory - Gr. III [3-1 (21/22) batch]
+  1.00 - 3.00            CHE 3215               L7                        Heterocyclic and Synthetic Organic Chemistry
+  1.00 - 3.00            COM 1407               CS Lab & IT Lab           Principles of Computer Programming - Pra I & II
+  3.30 - 5.30            COM 1407               CS Lab & IT Lab           Principles of Computer Programming - Pra III & IV
+  1.00 - 2.00            PHY 2109               L8                        Physical Geology
+  1.00 - 2.30            HPT 2104               L11                       Introduction to Epidemiology
+
+13.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ZOO 1201               Auditorium, L8            Invertebrate Diversity
+  9.00 - 12.00           CHE 3214               CHE LAB                   Chemistry Laboratory - Gr. IV [3-1 (21/22) batch]
+  1.00 - 3.00            HPT 3202               L8                        Commercial Influences on Health
+  1.00 - 4.00            CHE 3214               CHE LAB                   Chemistry Laboratory - Gr. V [3-1 (21/22) batch]
+  1.00 - 3.00            ZOO 1201               ZOO LAB & BOT LAB         Invertebrate Diversity - Pra. Gr. I & II
+  3.15 - 5.15            ZOO 1201               ZOO LAB & BOT LAB         Invertebrate Diversity - Pra. Gr. III & IV
+  9.00 - 11.00           MAT 3227               L7                        Financial Mathematics
+
+14.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           MIB 3204               Auditorium                Food Microbiology
+  9.00 - 11.00           PHY 1201               L8, L11, L7               General Physics
+  9.00 - 11.00           HPT 1214/1201          L11, L7                   Basic Human Physiology
+  1.00 - 3.00            MAT 3221               L11                       Graph Theory
+
+15.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BIO 1201               Convocation Hall          Cell Biology and Biochemistry (HPT & BIO)
+  9.00 - 11.00           MIB 3208               L7                        Environmental Microbiology
+  9.00 onwards           MAT 3130               L1                        Seminar
+  2.00 - 5.00            HPT 2301               L8                        Psychology and Human Behavior
+  2.00 - 4.00            ICT 3202               Auditorium, L1            Operational Research
+  2.00 - 5.00            CHE 3311               L7                        Advanced Analytical Chemistry II
+
+16.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           CHE 3203               Auditorium                Chemistry of Polymers
+  9.00 - 11.00           MAT 3227               L7                        Financial Mathematics
+  1.00 - 4.00            COM 2304               Convocation Hall          Computer Graphics and Image Processing
+  1.00 - 4.00            ICT 2403               Convocation Hall          Graphics & Image Processing
+
+18.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           MAT 1206               CS Lab & IT Lab           Introduction to Math LAB - Gr.I & II
+  9.00 - 11.00           BIO 3204               L7                        Bioinformatics
+  9.00 - 11.00           ZOO 2203               L11                       Animal Behavior
+  11.30 - 1.30           MAT 1206               CS Lab                    Introduction to Math LAB - Gr.III
+  1.00 - 2.30            HPT 1104               L8, L9                    History and Evolution of Health Promotion
+  1.00 - 4.00            CHE 2107               CHE LAB                   Organic Chemistry Laboratory Pra - Gr. I
+  1.00 - 4.00            MAT 2306               L8                        Operation Research I
+  1.00 - 3.00            BIO 3204               ZOO LAB                   Bioinformatics - Pra.
+
+19.05.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           CHE 2107               CHE LAB                   Organic Chemistry Laboratory Pra - Gr. II
+  9.00 - 11.00           BIO 1201               ZOO LAB & BOT LAB         Cell Biology and Biochemistry Pra - Gr. I & II
+  9.00 - 11.00           CHE 3209               L7                        Natural Products Chemistry
+  11.30 - 1.30           BIO 1201               ZOO LAB & BOT LAB         Cell Biology and Biochemistry Pra - Gr. III & IV
+  1.00 - 3.00            ICT 1201               Auditorium, L8            Fundamentals of Computer Systems
+  2.00 - 4.00            BIO 1201               ZOO LAB & BOT LAB         Cell Biology and Biochemistry Pra - Gr. V & VI
+  4.30 - 6.30            BIO 1201               ZOO LAB & BOT LAB         Cell Biology and Biochemistry Pra - Gr. VII & VIII
+  1.00 - 4.00            CHE 2107               CHE LAB                   Organic Chemistry Laboratory Pra - Gr. III
+
+20.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           MIB 3202               L7                        Soil Microbiology
+  9.00 - 11.00           PHY 3203               L2                        Physical Oceanography
+  9.00 - 12.00           CHE 2107               CHE LAB                   Organic Chemistry Laboratory Pra - Gr. IV
+  9.00 - 12.00           HPT 2302               Auditorium                Working with Communities
+  1.00 - 4.00            CHE 2107               CHE LAB                   Organic Chemistry Laboratory Pra - Gr. V
+  1.00 - 3.00            ICT 3207               L11, L1                   Professional Practice & Ethics
+
+21.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           HPT 1215/1202          L11, L1                   Introduction to Human Diseases
+  9.00 - 11.00           BIO 3201               Auditorium                Molecular Biology
+  1.00 - 2.00            CHE 3120               L7                        Calculations in Chemistry
+  1.00 - 3.00            MAT 3224               —                         Partial Differential Equations
+
+22.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ICT 3214               Convocation Hall          Mobile Application Development
+  9.00 - 11.00           CHE 2205               —                         Inorganic Chemistry
+  1.00 - 3.00            BIO 3203               Auditorium                Environmental Pollution
+
+23.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           IDC 2201               Convocation Hall          English for Professional Purpose
+  1.00 - 2.00            PHY 1102               L11, L7                   Waves and Vibrations
+
+25.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           MAT 3226               Auditorium                Operational Research II
+  9.00 - 11.00           MIB 3203               Auditorium                Virology
+  1.00 - 4.00            BDC 3301               L10                       Concepts of Biodiversity Conservation
+  1.00 - 4.00            STA 2304               Auditorium                Regression Analysis
+  1.00 - 4.00            STA 1303               L7                        Mathematics for Statistics
+
+26.05.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           ICT 2301               Convocation Hall          Design and Analysis of Algorithms
+  9.00 - 11.00           PHY 3209               L2                        Solid State Physics
+  9.00 - 11.00           BOT 2201               L8                        Plant Physiology
+  9.00 - 3.00            CHE 3218               CHE LAB                   Advanced Organic Chemistry Laboratory
+  1.00 - 3.00            MAT 1204/MAP 1302      Auditorium                Differential Equations I
+  1.00 - 4.00            MAT 1204/MAP 1302      L1                        Differential Equations I
+  1.00 - 3.00            HPT 1205               L11                       Communication in Public Health
+  1.00 - 3.00            BOT 2201               BOT LAB & ZOO LAB         Plant Physiology Pra. Gr. I & II
+  3.15 - 5.15            BOT 2201               BOT LAB                   Plant Physiology Pra. Gr. III
+
+27.05.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BOT 1202               Convocation Hall          Functional Plant Anatomy and Basic Wood Science
+  9.00 - 11.00           MAT 1201               Convocation Hall          Mathematical Methods I
+  9.00 - 11.00           CHE 3202               Convocation Hall          Advanced Biochemistry
+  9.00 - 10.30           HPT 1103               —                         Concepts of Health
+  1.00 - 2.45            BOT 1202               BOT LAB & ZOO LAB         Functional Plant Anatomy and Basic Wood Science - Pra. Gr. I & II
+  3.00 - 4.45            BOT 1202               BOT LAB & ZOO LAB         Functional Plant Anatomy and Basic Wood Science - Pra. Gr. III & IV
+
+29.05.2026
+----------------------------------------------------------------------
+  8.30 AM onwards        HPF 3101               Auditorium                Reporting Health Changes in Student Groups
+  9.00 - 12.00           ICT 1404               Convocation Hall          Mathematics & Statistics for Computing
+  9.00 - 11.00           STA 2207               CS Lab & IT Lab           Introduction to R/Python Statistical Language - Gr. I
+  11.30 - 1.30           STA 2207               CS Lab & IT Lab           Introduction to R/Python Statistical Language - Gr. II
+  2.00 - 4.00            CHE 1201               L11, L1, L2               General Chemistry
+
+01.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BOT 3203               L11                       Postharvest Technology of Plant Products
+  9.00 - 11.00           PHY 3212               L11                       Electronics II
+  1.00 - 3.00            STA 1202               L11                       Introduction to Probability
+  1.00 - 3.00            IDC 2202               L8                        Management Information System
+  8.30 AM onwards        HPF 3302               Auditorium                Addressing Obstacles to Progress with Communities
+  8.30 AM onwards        HPF 3103               Auditorium                Reviewing Progress with Communities and Redirecting Efforts
+  8.30 AM onwards        HPF 3204               Auditorium                Progress Evaluation
+
+02.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ZOO 2201               Auditorium                Animal Histology and Physiology
+  9.00 - 12.00           CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. I
+  1.00 - 4.00            CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. II
+  1.00 - 3.00            ZOO 2201               ZOO LAB & BOT LAB         Animal Histology and Physiology Pra - Gr. I & II
+  3.15 - 5.15            ZOO 2201               ZOO LAB & BOT LAB         Animal Histology and Physiology Pra - Gr. III & IV
+  1.00 - 3.00            MAT 2203               L8                        Complex Calculus
+  1.00 - 3.00            COM 3204               L8                        Information Security
+  1.00 - 4.00            ICT 3303               L11, L1                   Information Systems Security
+  8.30 AM onwards        HPF 3302               Auditorium                Addressing Obstacles to Progress with Communities
+  8.30 AM onwards        HPF 3103               Auditorium                Reviewing Progress with Communities and Redirecting Efforts
+  8.30 AM onwards        HPF 3204               Auditorium                Progress Evaluation
+
+03.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BIO 3206               L8, L9                    Experiments Design & Nonparametric Methods in Statistics
+  9.00 - 12.00           CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. III
+  1.00 - 4.00            CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. IV
+  9.00 - 12.00           MAT 2305               L11                       Real Analysis II
+  8.30 AM onwards        HPF 2201               Auditorium                Applying Measures to Improve Health Status of a Student Group
+
+04.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           ZOO 2204               Auditorium                Fish Biology
+  9.00 - 11.00           ICT 2204               Convocation Hall          Web Technologies
+  9.00 - 12.00           COM 2303               Convocation Hall          Web Design
+  9.00 - 12.00           CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. V
+  1.00 - 3.00            ZOO 2204               ZOO LAB                   Fish Biology Pra - Gr. I
+  3.15 - 5.15            ZOO 2204               ZOO LAB                   Fish Biology - Pra. II
+  1.00 - 4.00            CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. VI
+  1.00 - 3.00            MAT 3329               L8                        Network Optimization
+  8.30 AM onwards        HPF 2102               Auditorium                Introduction to Field Settings
+  8.30 AM onwards        HPF 2103               Auditorium                Engagement of Communities
+  8.30 AM onwards        HPF 2204               Auditorium                Clarifying Health Issues with Assigned Communities
+  8.30 AM onwards        HPF 2105               Auditorium                Devising Measures of Health in Partnership with Communities
+
+05.06.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           ICT 1303               L11, L8, L10              Basic Electronics and Digital Logic Design
+  9.00 - 11.00           ZOO 3201               L7                        Medical Entomology
+  9.00 - 11.00           CHE 3207               —                         Electrochemistry
+  9.00 - 12.00           CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. VII
+  2.00 - 5.00            CHE 1104               CHE LAB                   Inorganic Chemistry Laboratory - Gr. VIII
+  2.00 - 4.00            ZOO 3201               ZOO LAB                   Medical Entomology - Pra
+  2.00 - 3.00            PHY 2105               L8                        Quantum Mechanics
+  8.30 AM onwards        HPF 2102               Auditorium                Introduction to Field Settings
+  8.30 AM onwards        HPF 2103               Auditorium                Engagement of Communities
+  8.30 AM onwards        HPF 2204               Auditorium                Clarifying Health Issues with Assigned Communities
+  8.30 AM onwards        HPF 2105               Auditorium                Devising Measures of Health in Partnership with Communities
+
+06.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BOT 2204               Auditorium                Plant Pathology
+  1.00 - 3.00            BOT 2204               BOT LAB & ZOO LAB         Plant Pathology Pra - Gr. I & II
+  3.15 - 5.15            BOT 2204               BOT LAB & ZOO LAB         Plant Pathology Pra - Gr. III & IV
+  9.00 - 12.00           COM 3303               Convocation Hall          Artificial Intelligence
+  9.00 - 11.00           ICT 3212               Convocation Hall          Introduction to Intelligent Systems
+
+08.06.2026
+----------------------------------------------------------------------
+  9.00 - 3.00            CHE 3219               CHE LAB                   Advanced Physical Chemistry Laboratory
+  9.00 - 11.00           BOT 1201               L8, L1                    Plant Diversity
+  9.00 - 12.00           MAT 3323               L7                        Mathematical Statistics
+
+09.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           BOT 1201               BOT LAB & ZOO LAB         Plant Diversity - Pra. Gr. I & Gr. II
+  1.00 - 3.00            CHE 3208               L8                        Environmental Chemistry
+  11.15 - 1.15           BOT 1201               BOT LAB & ZOO LAB         Plant Diversity - Pra. Gr. III & Gr. IV
+  1.30 - 3.30            BOT 1201               BOT LAB & ZOO LAB         Plant Diversity - Pra. Gr. V & Gr. VI
+  4.00 - 6.00            BOT 1201               BOT LAB & ZOO LAB         Plant Diversity Gr. VI & Gr. VII
+
+10.06.2026
+----------------------------------------------------------------------
+  9.00 - 12.00           FDN 1201               Convocation Hall          General English
+  1.00 - 3.00            FDN 1205               Examination Hall          Basic Sciences for Non-Sciences Students
+  1.00 - 3.00            FDN 1202               Examination Hall          Introduction to Computers
+
+11.06.2026
+----------------------------------------------------------------------
+  9.00 AM onwards        FDN 1201               L1, L2, L3, L4            General English Oral Test
+  9.00 - 11.00           PHY 3211               L7                        Medical Physics
+
+12.06.2026
+----------------------------------------------------------------------
+  9.00 - 11.00           FDN 1203               Convocation Hall          General Biology
+  9.00 - 11.00           FDN 1204               Convocation Hall          Basic Mathematics
+  9.00 - 12.00           FDN 1306               L11, L8                   Basic Mathematics for Non Mathematics Students
+  9.00 AM onwards        IDC 2201               Auditorium, L1, L2, L4    English for Professional Purpose Oral Test
+  2.00 - 4.00            CHE 3206               L8                        Chemical and Process Technology
+
+Total: 207 entries across 35 exam dates
